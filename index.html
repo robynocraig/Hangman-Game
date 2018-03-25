@@ -1,0 +1,60 @@
+<!-- Main screen has:
+- Image/Header at the top
+- One container with two columns
+  - Left column has Hangman Image
+  - Right column has game play
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <head>
+      <meta charset="UTF-8">
+      <title>Robyn's Hangman Game</title>
+      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+  </head>
+  <body>
+  <div class="container">
+
+    <!-- Top Image -->
+    <img src="assets/images/spongebob.png" class="spongebob-image" alt="Spongebob Squarepants">
+    <img src="assets/images/hangmanbanner.png" class="hangman-image" alt="Hangman">
+
+    <!-- Hangman Game Left Column -->
+
+    <div class="game-board">
+
+      <section class="game-left">
+
+        <img src="assets/images/sb_hangman.jpeg" class="hangman-image" alt="Spongebob Hangman">
+
+      </section>
+
+      <!-- Hangman Game Right Column -->
+
+      <section class="game-right">
+
+        <p>PRESS ANY KEY TO GET STARTED!</p>
+
+        <p>WINS</p>
+
+        <p>CURRENT WORD</p>
+
+        <p id="letters"></p>
+
+        <p>NUMBER OF GUESSES REMAINING</pp>
+
+        <p>12</p>
+
+        <p>LETTERS ALREADY GUESSED</p>
+
+      </section>
+
+    </div>
+
+  </div>
+  <script src="assets/javascript/game.js"></script>
+  </body>
+</html>
