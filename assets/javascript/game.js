@@ -7,13 +7,18 @@ var words = [
  "spongebob"
 ];
 
-// When user presses a key, game starts
-//document.onkeyup = function(event) {
+// Available letters
+var availableLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","q","r","s","t","u","v","w","x","y","z"];
+
+// Guesses Left
+var guessesLeft = 12;
 
 // Choose a random word
 var word = words[Math.floor(Math.random() * words.length)];
 
 console.log (word);
+
+var remainingLetters = word.length
 
 // Current word with applicable letter spaces below
 
@@ -26,6 +31,26 @@ console.log (answerArray);
 
 document.getElementById("letters").innerHTML = answerArray.join(' ');
 
+// User clicks letter to start game
+
+document.onkeyup = function(event) {
+
+  // If there are one or more turns available:
+
+  if (guessesLeft > 0) {
+
+  // Get a guess from the player
+  var guess = event.key;
+
+   // Update the game state with the guess
+   for (var j = 0; j < word.length; j++) {
+     if (word[j] === guess) {
+     answerArray[j] = guess;
+     remainingLetters--;
+      }
+    }
+  }
+}
 // As user guesses a letter, check if that letter is in the word
 
   // If yes, fill in that space above
